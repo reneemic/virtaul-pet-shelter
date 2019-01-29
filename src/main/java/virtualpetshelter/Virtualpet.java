@@ -64,6 +64,6 @@ public class Virtualpet {
 
 	public void petWater() {
 		petWater += 7;
-		petBored -=1;
+		
 	}
 }

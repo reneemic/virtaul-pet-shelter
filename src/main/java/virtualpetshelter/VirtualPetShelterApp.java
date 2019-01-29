@@ -7,20 +7,22 @@ public class VirtualPetShelterApp {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
-		Virtualpet pets = new Virtualpet("Kathy", "tabby");
+		Virtualpet pets = new Virtualpet("Pauly", "Parrot");
 		VirtualPetShelter shelterPets = new VirtualPetShelter();
 		shelterPets.addPet(pets);
-		Virtualpet oldPet = new Virtualpet("Rita", "beagle");
+		Virtualpet oldPet = new Virtualpet("Rita", "Yorkie");
 		shelterPets.addPet(oldPet);
 		Virtualpet permanentLab = new Virtualpet("Jeni", "Golden Lab");
 		shelterPets.addPet(permanentLab);
-		Virtualpet loyalParrot = new Virtualpet("Pauly", "Parrot");
-		shelterPets.addPet(loyalParrot);
+		Virtualpet loyalDoge = new Virtualpet("Les", "Saint Bernard");
+		shelterPets.addPet(loyalDoge);
+		Virtualpet moodyPet = new Virtualpet("Renee", "Maine Coon");
+		shelterPets.addPet(moodyPet);
 		System.out.println("Welcome to Liam's Animal Shelter and Sanctuary!");
 
-		String showMenu = "\n\t	What would you like to do with the pets?\n" + "\n\t" + "1. Feed the pets\n\t"
-				+ "2. Water the pets\n\t" + "3. Play with a pet\n\t" + "4. Adopt a pet\n\t" + "5. Admit a pet\n\t"
-				+ "6. Show all pets.\n\t" + "7. Quit";
+		String showMenu = "\n\t	What would you like to do with the pets?\n" + "\n\t" + "1. Feed the pets in the shelter\n\t"
+				+ "2. Give water to the pets\n\t" + "3. Play with a pet\n\t" + "4. Adopt a pet from the shelter\n\t" + "5. Admit a pet into the shelter\n\t"
+				+ "6. Show all pets currently in the shelter.\n\t" + "7. Quit";
 
 		String userChoice;
 		while (shelterPets.hasPets()) {
@@ -39,7 +41,7 @@ public class VirtualPetShelterApp {
 			case "2":
 				shelterPets.callTick(pets);
 				shelterPets.waterPets(pets);
-				System.out.println("The dogs are slobbering, the Kathy is hissing at the water bowl, and Pauly is bathing in it.  They've had enough water");
+				System.out.println("The dogs are slobbering, the Renee is hissing at the water bowl, and Pauly is bathing in it.  They've had enough water");
 				break;
 			case "3":
 				shelterPets.callTick(pets);
